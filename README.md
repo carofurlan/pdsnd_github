@@ -10,7 +10,9 @@ US Bikeshare
 This project explores Bike share data from 3 different cities; it uses data from csv files to compute statistics from those 3 cities, also takes user inputs to create an interactive experience.
 
 ### Files used
-Include the files used
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
