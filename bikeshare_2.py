@@ -96,7 +96,8 @@ def load_data(city, month, day):
 
 def time_stats(df, month, day):
     """
-    Displays statistics on the most frequent times of travel.
+    Displays statistics on the most frequent times of travel
+
     """
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
@@ -224,6 +225,9 @@ def display_raw_data(df):
             print(df.iloc[row:row+5])
 
 def main():
+    """
+    Executes functions programmed in this file
+    """
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
