@@ -47,8 +47,11 @@ def get_filters():
     day=''
     while True:
         day = input("\n Which day of the week would you like to consider? (Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday)? Type 'all' for no day filter \n").lower()
-        if day in DAY_DATA and day !='all':
-            print("\nTHank you. We will filter on: ", day)
+        if (day in DAY_DATA) and (day !='all'):
+            print("\nThank you. We will filter on: ", day)
+            break
+        elif (day in DAY_DATA) and (day =='all'):
+            print("\nThank you. We will apply no day filter.")
             break
         else:
             print("\n Please enter a valid day")
