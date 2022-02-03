@@ -10,9 +10,15 @@ US Bikeshare
 This project explores Bike share data from 3 different cities; it uses data from csv files to compute statistics from those 3 cities, also takes user inputs to create an interactive experience.
 
 ### Files used
-chicago.csv
-new_york_city.csv
-washington.csv
+1. chicago.csv
+2. new_york_city.csv
+3. washington.csv
+
+### Softwares used:
+1. Python 3
+2. NumPy
+3. pandas installed using Anaconda
+4. Atom
 
 ### Credits
 https://stackoverflow.com/questions/23294658/asking-the-user-for-input-until-they-give-a-valid-response
