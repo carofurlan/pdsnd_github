@@ -15,5 +15,7 @@ new_york_city.csv
 washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+https://stackoverflow.com/questions/23294658/asking-the-user-for-input-until-they-give-a-valid-response
+https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.mode.html
+https://docs.python.org/3/tutorial/errors.html#handling-exceptions
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.iloc.html#pandas-dataframe-iloc
