@@ -34,8 +34,11 @@ def get_filters():
     month=''
     while True:
         month = input("\n Which month would you like to consider? (January, February, March, April, May, June)? Type 'all' for no month filter\n").lower()
-        if month in MONTH_DATA:
-            print("\nThank you. Month(s) to be considered is(are): ", month)
+        if (month in MONTH_DATA) and (month !='all'):
+            print("\nThank you. We will filter on: ", month)
+            break
+        elif (month in MONTH_DATA) and (month =='all'):
+            print("\nThank you. We will apply no month filter.")
             break
         else:
             print("\n Please enter a valid month")
@@ -44,8 +47,8 @@ def get_filters():
     day=''
     while True:
         day = input("\n Which day of the week would you like to consider? (Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday)? Type 'all' for no day filter \n").lower()
-        if day in DAY_DATA:
-            print("\n Day(s) to be considered is(are): ", day)
+        if day in DAY_DATA and day !='all':
+            print("\nTHank you. We will filter on: ", day)
             break
         else:
             print("\n Please enter a valid day")
