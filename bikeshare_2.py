@@ -34,8 +34,11 @@ def get_filters():
     month=''
     while True:
         month = input("\n Which month would you like to consider? (January, February, March, April, May, June)? Type 'all' for no month filter\n").lower()
-        if month in MONTH_DATA:
-            print("\nThank you. Month(s) to be considered is(are): ", month)
+        if (month in MONTH_DATA) and (month !='all'):
+            print("\nThank you. We will filter on: ", month)
+            break
+        elif (month in MONTH_DATA) and (month =='all'):
+            print("\nThank you. We will apply no month filter.")
             break
         else:
             print("\n Please enter a valid month")
@@ -44,8 +47,11 @@ def get_filters():
     day=''
     while True:
         day = input("\n Which day of the week would you like to consider? (Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday)? Type 'all' for no day filter \n").lower()
-        if day in DAY_DATA:
-            print("\n Day(s) to be considered is(are): ", day)
+        if (day in DAY_DATA) and (day !='all'):
+            print("\nThank you. We will filter on: ", day)
+            break
+        elif (day in DAY_DATA) and (day =='all'):
+            print("\nThank you. We will apply no day filter.")
             break
         else:
             print("\n Please enter a valid day")
@@ -161,7 +167,16 @@ def trip_duration_stats(df):
 
     # display total travel time
     total_travel_time = df['Trip Duration'].sum()
-    print("The total travel time is: " + str(total_travel_time) + " seconds")
+    total_travel_time = float (total_travel_time)
+    day = total_travel_time // (24 * 3600)
+    total_travel_time = total_travel_time % (24 * 3600)
+    hour = total_travel_time // 3600
+    total_travel_time %= 3600
+    minutes = total_travel_time // 60
+    total_travel_time %= 60
+    seconds = total_travel_time
+    print("The total travel time is: " + str(day) + "  days, " + str(hour) + " hours, " + str(minutes) +  " minutes, " + str(seconds)  + " seconds")
+    #print("The total travel time is: " + str(total_travel_time) + " seconds")
 
     # display mean travel time
     mean_travel_time = df['Trip Duration'].mean()
